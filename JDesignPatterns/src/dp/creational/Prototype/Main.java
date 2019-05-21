@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Prototype;
+package dp.Creational.Prototype;
 
 import java.util.ArrayList;
 import java.util.List;
