@@ -11,8 +11,8 @@ public abstract class ObjectPool<T> {
 
   public ObjectPool() {
     expirationTime = 30000; // Tempo de expiração 30 segundos
-    locked = new Hashtable<T, Long>();
-    unlocked = new Hashtable<T, Long>();
+    locked = new Hashtable<>();
+    unlocked = new Hashtable<>();
     //locked e unlocked são exclusivos e só executam de maneira atômica. Threads que tentam pegar um lock que ja esta pego,
     //ficarão em conjunto especial esperando a liberação do lock, (não necessariamente numa fila)
   }
