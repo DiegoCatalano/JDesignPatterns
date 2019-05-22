@@ -35,6 +35,10 @@ public class Singleton {
     
     private Singleton(){}
     
+    /**
+     * Tem que existir este para ser o singleton
+     * @return 
+     */
     public static Singleton getInstance(){
         return new Singleton();
     }
