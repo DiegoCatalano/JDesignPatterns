@@ -11,8 +11,25 @@ package dp.Creational.Prototype;
  */
 public class Triangulo extends Prototype {
     
-    public int z;
-    public int bissetriz;
+    private int z;
+    private int bissetriz;
+
+    public void setZ(int z) {
+        this.z = z;
+    }
+
+    public void setBissetriz(int bissetriz) {
+        this.bissetriz = bissetriz;
+    }
+
+    public int getZ() {
+        return z;
+    }
+
+    public int getBissetriz() {
+        return bissetriz;
+    }
+    
     
 
     public Triangulo(Triangulo obj) {

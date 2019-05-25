@@ -23,19 +23,19 @@ public class Main {
         List<Prototype> tipo2 = new ArrayList<>();
 
         Quadrado quadrado = new Quadrado();
-        quadrado.x=10;
-        quadrado.y=10;
-        quadrado.vertice=4;
+        quadrado.setX(10);
+        quadrado.setY(10);
+        quadrado.setVertice(4);
         
         
         Quadrado novoQuadrado = (Quadrado) quadrado.clone();
         tipo1.add(novoQuadrado);
         //
         Triangulo triangulo = new Triangulo();
-        triangulo.x=10;
-        triangulo.y=10;
-        triangulo.z=5;
-        triangulo.bissetriz=5;
+        triangulo.setX(10);
+        triangulo.setY(10);
+        triangulo.setZ(10);
+        triangulo.setBissetriz(5);
         Triangulo novoTriangulo = (Triangulo) triangulo.clone();
         tipo2.add(novoTriangulo);
         

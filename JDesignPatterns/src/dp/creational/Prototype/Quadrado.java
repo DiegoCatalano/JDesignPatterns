@@ -10,7 +10,18 @@ package dp.Creational.Prototype;
  * @author Luiz
  */
 public class Quadrado extends Prototype{
-    public int vertice;
+    private int vertice;
+
+    public int getVertice() {
+        return vertice;
+    }
+
+    public void setVertice(int vertice) {
+        this.vertice = vertice;
+    }
+    
+    
+    
     
     public Quadrado(){
     }
