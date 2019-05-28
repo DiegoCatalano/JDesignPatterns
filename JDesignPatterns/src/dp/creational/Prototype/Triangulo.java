@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package dp.Creational.Prototype;
+package dp.creational.Prototype;
 
 /**
  *
@@ -11,12 +11,28 @@ package dp.Creational.Prototype;
  */
 public class Triangulo extends Prototype {
     
-    public int z;
-    public int bissetriz;
+    private int z;
+    private int bissetriz;
+
+    public int getZ() {
+        return z;
+    }
+
+    public int getBissetriz() {
+        return bissetriz;
+    }
+
+    public void setZ(int z) {
+        this.z = z;
+    }
+
+    public void setBissetriz(int bissetriz) {
+        this.bissetriz = bissetriz;
+    }
+    
     
 
     public Triangulo(Triangulo obj) {
-        super(obj);
         this.bissetriz = obj.bissetriz;
     }
     
@@ -30,7 +46,10 @@ public class Triangulo extends Prototype {
     
     @Override
     public boolean equals(Object obj) {
-        if (!(obj instanceof Triangulo) ) return false;
+        if (!(obj instanceof Triangulo)) {
+            return false;
+           }
+
         Triangulo novoTriangulo2 = (Triangulo) obj;
         return novoTriangulo2.bissetriz == bissetriz;
     }

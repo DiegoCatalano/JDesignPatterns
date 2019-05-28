@@ -3,21 +3,46 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package dp.Creational.Prototype;
+package dp.creational.Prototype;
 
 /**
  *
  * @author Luiz
  */
 public class Quadrado extends Prototype{
-    public int vertice;
+    private int vertice;
+
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public void setY(int y) {
+        this.y = y;
+    }
+    
+
+    public int getVertice() {
+        return vertice;
+    }
+
+    public void setVertice(int vertice) {
+        this.vertice = vertice;
+    }
+    
     
     public Quadrado(){
     }
     
-    public Quadrado(Quadrado obj) {
-        super(obj);
-        this.vertice=obj.vertice;
+    protected Quadrado(Quadrado obj) {
+        obj.vertice=this.vertice;
     }
 
     
@@ -25,12 +50,14 @@ public class Quadrado extends Prototype{
     @Override
     public  Prototype clone() {
         Quadrado novoQuadrado =new Quadrado(this);
-        return novoQuadrado;
+        return new Quadrado(this);
     }
     
    @Override
     public boolean equals(Object obj) {
-        if (!(obj instanceof Quadrado) || !super.equals(obj)) return false;
+        if (!(obj instanceof Quadrado)) {
+            return false;
+        }
         Quadrado novoQuadrado2 = (Quadrado) obj;
         return novoQuadrado2.vertice == vertice;
     }

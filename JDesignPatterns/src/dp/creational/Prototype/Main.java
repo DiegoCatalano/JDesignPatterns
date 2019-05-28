@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package dp.Creational.Prototype;
+package dp.creational.Prototype;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,34 +25,32 @@ public class Main {
         Quadrado quadrado = new Quadrado();
         quadrado.x=10;
         quadrado.y=10;
-        quadrado.vertice=4;
-        
-        
+        quadrado.setVertice(4);
+        tipo1.add(quadrado);
         Quadrado novoQuadrado = (Quadrado) quadrado.clone();
         tipo1.add(novoQuadrado);
         //
-        Triangulo triangulo = new Triangulo();
+       Triangulo triangulo = new Triangulo();
         triangulo.x=10;
         triangulo.y=10;
-        triangulo.z=5;
-        triangulo.bissetriz=5;
-        Triangulo novoTriangulo = (Triangulo) triangulo.clone();
-        tipo2.add(novoTriangulo);
+        triangulo.setZ(5);
+        triangulo.setBissetriz(5);
+        tipo1.add(triangulo);
         
         cloneComparacao(tipo1,tipo2);
     }
      private static void cloneComparacao(List<Prototype> tipo1, List<Prototype> tipo2) {
-        for (Prototype forma : tipo1) {
-            tipo2.add(forma.clone());
+        for (Prototype tipo : tipo1) {
+            tipo2.add(tipo.clone());
         }
-
         for (int i = 0; i < tipo1.size(); i++) {
             if (tipo1.get(i) != tipo2.get(i)) {
-                System.out.println(i + " Formas geometricas diferentes");
-                if (tipo1.get(i).equals(tipo2.get(i))) {
-                    System.out.println(i +  " Formas geometricas tem os mesmos valores");
-                }else {
-                    System.out.println(i + ": Mas nao sao identicas ");
+                
+            System.out.println(i + " Formas geometricas diferentes");
+            if ((tipo1.get(i).equals(tipo2.get(i)))) {
+                System.out.println(i +  " Mas possuem o mesmo valor ");
+            }else {
+                System.out.println(i + " E nao possuem o mesmo valor ");
                 }
             }else{
                 System.out.println(i+ " As formas geometricas sao as mesmas ");
