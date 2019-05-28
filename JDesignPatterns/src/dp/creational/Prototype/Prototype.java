@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package dp.Creational.Prototype;
+package dp.creational.Prototype;
 
 /**
  *
@@ -11,38 +11,27 @@ package dp.Creational.Prototype;
  */
 public abstract class Prototype {
     
-    private int x;
-    private int y;
-
-    public void setX(int x) {
-        this.x = x;
-    }
-
-    public void setY(int y) {
-        this.y = y;
-    }
-    
-
-    public int getX() {
-        return x;
-    }
-
-    public int getY() {
-        return y;
-    }
-    
-    public Prototype (Prototype obj){
-        this.x = obj.x;
-        this.y= obj.y;       
-    }
-
+    public int x;
+    public int y;
     public Prototype() {
     }
     
-    
-    
-    
+    public Prototype (Prototype obj){
+       
+        this.x = obj.x;
+        this.y= obj.y;
+        
+    }
+
     public abstract Prototype clone();
     
-    
+    @Override
+    public boolean equals(Object obj) {
+        if (!(obj instanceof Prototype) || !super.equals(obj)) {
+            return false;
+        }
+        Prototype novoElemento = (Prototype) obj;
+        return novoElemento.x == x && novoElemento.y== y;
+    }
+ 
 }
