@@ -22,7 +22,7 @@ public class Triangulo extends Prototype {
     
     @Override
     public Prototype clone() {
-        Triangulo novoTriangulo =new Triangulo(this);
+        Triangulo novoTriangulo = new Triangulo(this);
         return novoTriangulo;
     }
 
@@ -30,7 +30,7 @@ public class Triangulo extends Prototype {
     
     @Override
     public boolean equals(Object obj) {
-        if (!(obj instanceof Triangulo) || !super.equals(obj)) return false;
+        if (!(obj instanceof Triangulo) ) return false;
         Triangulo novoTriangulo2 = (Triangulo) obj;
         return novoTriangulo2.bissetriz == bissetriz;
     }
