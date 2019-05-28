@@ -13,11 +13,19 @@ import java.io.Console;
  */
 public class Luz {
     
-    public String local = "";           // local onde a luz está acesa
+    private String local = "";           // local onde a luz está acesa
 
     public Luz() {
     }
 
+    public String getLocal() {
+        return local;
+    }
+
+    public void setLocal(String local) {
+        this.local = local;
+    }
+    
     public void Ligar(){
         System.out.printf("luz ligada: ", local);      // onde a luz está ligada
     }

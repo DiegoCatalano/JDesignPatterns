@@ -14,7 +14,7 @@ public class DesligarLuzCozinha implements ICommand{
     private Luz luz;
 
     public DesligarLuzCozinha(Luz luz) {
-        luz.local = "Cozinha";                  
+        luz.setLocal("cozinha");                  
         this.luz = luz;
     }                                       // mesma ideia da classe LigarLuzCozinha
     

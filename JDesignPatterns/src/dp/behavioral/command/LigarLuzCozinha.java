@@ -14,7 +14,7 @@ public class LigarLuzCozinha implements ICommand{
     private Luz luz;                            
 
     public LigarLuzCozinha(Luz luz) {       
-        luz.local = "Cozinha";             // mostra que a luz onde está ligada     
+        luz.setLocal("cozinha");             // mostra que a luz onde está ligada     
         this.luz = luz;                    // é a da cozinha
     }
     
