@@ -1,7 +1,7 @@
 package dp.structural.Flyweight;
 
 public class FlyweightDesignPattern {
-	private static final 	String saudes[] = { "Vazia", "Baixa", "Média", "Alta", "Máxima" };
+	private static final 	String saudes[] = { "Vazia", "Baixa", "Media", "Alta", "Maxima" };
 	public static void main(String[] args) {
 		
 		for(int i = 0; i < 20; i++) {

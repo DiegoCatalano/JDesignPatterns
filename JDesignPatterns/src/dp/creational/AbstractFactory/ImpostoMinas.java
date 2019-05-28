@@ -13,8 +13,7 @@ import java.math.BigDecimal;
  */
 public class ImpostoMinas implements Imposto {
 
-    public ImpostoMinas() {
-    }
+    public ImpostoMinas() {}
 
     /**
      *

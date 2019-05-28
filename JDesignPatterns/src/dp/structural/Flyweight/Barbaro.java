@@ -11,7 +11,7 @@ public class Barbaro implements Unidade{ // Clase Unidade que implementa a inter
 
 
 	@Override
-	public void draw() { // método definido na interface Unidade
+	public void draw() { // metodo definido na interface Unidade
 		System.out.println("Unidade: Draw() [saude : " + saude);		
 	}		
 }
